@@ -9,7 +9,7 @@ create table hospedes (
 create table quartos (
 		id_quarto int primary key auto_increment,
         numero int not null,
-        tip0o varchar(50),
+        tipo varchar(50),
         preco decimal(10, 2)
 		);
 create table reservas (
