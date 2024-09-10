@@ -1,5 +1,5 @@
 create database hotelmanagementsystem;
-use hotelmanagement;
+use hotelmanagementsystem;
 create table hospedes (
 	id_hospede int primary key auto_increment,
     nome varchar(100)not null,
