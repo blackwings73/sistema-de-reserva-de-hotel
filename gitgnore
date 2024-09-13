@@ -1,0 +1,15 @@
+# Ignorar arquivos e diretórios comuns
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.sql
+
+# Ignorar arquivos de configuração local
+config.local.json
+.env
+
+# Ignorar diretórios de dependências
+node_modules/
+vendor/
