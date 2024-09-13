@@ -1,0 +1,59 @@
+# Hotel Management System
+
+Este repositório contém um esquema de banco de dados para um sistema de gerenciamento de hotel. O banco de dados é projetado para armazenar informações sobre hóspedes, quartos e reservas.
+
+## Estrutura do Banco de Dados
+
+O banco de dados possui as seguintes tabelas:
+
+- **Hospedes**
+  - `id_hospede` (INT, PK, AUTO_INCREMENT): Identificador único do hóspede.
+  - `nome` (VARCHAR(100)): Nome do hóspede.
+  - `telefone` (VARCHAR(15)): Número de telefone do hóspede.
+  - `email` (VARCHAR(100)): Endereço de e-mail do hóspede.
+
+- **Quartos**
+  - `id_quarto` (INT, PK, AUTO_INCREMENT): Identificador único do quarto.
+  - `numero` (INT): Número do quarto.
+  - `tipo` (VARCHAR(50)): Tipo do quarto (por exemplo, 'Single', 'Double', 'Suite').
+  - `preco` (DECIMAL(10,2)): Preço por noite do quarto.
+
+- **Reservas**
+  - `id_reserva` (INT, PK, AUTO_INCREMENT): Identificador único da reserva.
+  - `id_hospede` (INT, FK): Referência ao hóspede que fez a reserva.
+  - `id_quarto` (INT, FK): Referência ao quarto reservado.
+  - `data_checkin` (DATE): Data de check-in.
+  - `data_checkout` (DATE): Data de check-out.
+
+## Scripts SQL
+
+Os scripts SQL no repositório realizam as seguintes operações:
+
+1. **Criação do Banco de Dados e Tabelas**:
+   - Cria o banco de dados, as tabelas e define as relações entre elas.
+
+2. **Inserção de Dados**:
+   - Adiciona dados iniciais para hóspedes e quartos.
+   - Insere algumas reservas.
+
+3. **Consultas**:
+   - Consulta para obter informações sobre hóspedes, reservas e quartos.
+   - Consulta para encontrar quartos disponíveis em uma data específica.
+
+4. **Atualizações e Exclusões**:
+   - Atualiza informações de hóspedes e quartos.
+   - Exclui registros de reservas e hóspedes.
+
+## Uso
+
+1. Clone este repositório.
+2. Execute o script SQL em seu banco de dados MySQL para criar o esquema e inserir dados.
+3. Execute as consultas SQL fornecidas para interagir com o banco de dados e gerenciar reservas.
+
+## Contribuições
+
+Se você deseja contribuir para este projeto, por favor, faça um fork do repositório e envie um pull request com suas alterações.
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
